@@ -2,73 +2,74 @@
 
 ## 🎯 Objetivo do Sistema
 
-Esta aplicação tem como objetivo efetuar os testes automatizados para o site https://www.saucedemo.com/ usando a ferramenta Selenium através da linguagem Python.  
+Esta aplicação tem como objetivo efetuar os testes automatizados para o site https://www.saucedemo.com/ usando a ferramenta Selenium através da linguagem Python.
 
 ## ✅ Pré-requisitos
 - selenium >= 4.34
 - webdriver-manager >= 4.0
 - pytest >= 8.4
+- pytest-html
 
 ## 💻 Instalação via Windows
 
 ### 1. 📦 Criar um ambiente virtual (recomendado)
-    
+
     python -m venv venv
 
 ### 2. 🔹 Ativar o ambiente virtual
     venv\Scripts\activate
 
 ### 3. 🚀 Instalar as dependências
-    
+
     pip install selenium
-    
+
     pip install webdriver-manager
-    
+
     pip install pytest
-    
+
     pip install pytest-html
-    
+
   ou de uma vez...
-    
+
     pip install selenium webdriver_manager pytest pytest-html
-    
+
   ou via requirements...
-    
+
     pip install -r requirements.txt
 
 ### 4. ▶️ Executar script de teste
 - Para executar um teste espeífico:
-  
+
   Ex:
   ```python
   pytest ./tests/test_login.py
-  
+
 - Para executar um teste espeífico com mais detalhes:
 
   Ex:
   ```python
   pytest ./tests/test_login.py -s -v
-  
+
 - Para executar um teste espeífico com geração de relatório:
 
   Ex:
   ```python
   pytest ./tests/test_login.py --html=report.html
-  
+
 - Para executar todos os testes:
 
   Ex:
   ```python
   pytest
-  
+
 - Para executar todos os testes com mais detalhes:
-  
+
   Ex:
   ```python
   pytest -v
-  
+
 - Para executar todos os testes com geração de relatórios:
-  
+
   Ex:
   ```python
   pytest --html=report.html

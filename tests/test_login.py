@@ -10,10 +10,12 @@ users = [(user["username"], user["password"]) for user in load_all_users()]
 
 @pytest.mark.parametrize("username, password", users)
 def test_login(driver, username, password):
+    # Carrega o setup do Login
     login_page = LoginPage(driver)
     login_page.load()
     login_page.login(username, password)
 
+    # Verifica se o Login foi efetuado com sucesso
     try:
         errors = driver.find_elements(By.CLASS_NAME, "error-message-container")
         if errors:

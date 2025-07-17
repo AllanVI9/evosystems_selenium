@@ -8,15 +8,20 @@ from pages.product_page import ProductPage
 from tests.shared import safe_step
 from utils.config import load_all_users
 
+# Carrega todos os usuários da lista de credenciais
 users = [(user["username"], user["password"]) for user in load_all_users()]
 
 @pytest.mark.parametrize("username, password", users)
 def test_cart_add(driver, username, password):
+    # Carrega o setup do Login
     login_page = LoginPage(driver)
     login_page.load()
     login_page.login(username, password)
 
+    # Carrega o setup do Product
     product_page = ProductPage(driver)
+
+    # Adiciona produtos ao carrinho
     added_product_names = product_page.add_products_to_cart()
     print(f"🛒 Produtos adicionados ao carrinho: {added_product_names}")
 
@@ -25,8 +30,11 @@ def test_cart_add(driver, username, password):
     cart = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "shopping_cart_badge")))
     count = len(added_product_names)
     assert cart.text == str(count), f"Esperado {count} itens no carrinho, mas encontrou {cart.text}"
+
+    # Valida se os itens do carrinho correspondem aos produtos adicionados
     safe_step(lambda: validate_cart_items(driver, added_product_names), username, "Validar itens adicionados ao carrinho")
 
+    # Logout e Reset dos dados
     login_page.logout_reset()
 
 def validate_cart_items(driver, expected_names):
