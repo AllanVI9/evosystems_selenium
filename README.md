@@ -88,7 +88,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
 
 #### O fluxo lógico segue com as seguintes verificações:
 
-#### 🧪 test_login
+### 🧪 *test_login*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
@@ -98,7 +98,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
   - Verificar se a lista de produtos está visível.
   - Efetuar o logout e reset do ambiente.
 
-#### 🧪 test_cart_add
+### 🧪 *test_cart_add*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
@@ -111,7 +111,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
   - Verificar se os nomes dos produtos exibidos no carrinho batem com os adicionados ao mesmo.
   - Efetuar o logout e reset do ambiente.
 
-#### 🧪 test_cart_remove
+### 🧪 *test_cart_remove*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
@@ -125,7 +125,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
   - Verificar se o ícone totalizador do carrinho não está mais visível após a remoção de todos os produtos.
   - Efetuar o logout e reset do ambiente.
 
-#### 🧪 test_checkout_step_1_fill_fields
+### 🧪 *test_checkout_step_1_fill_fields*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
@@ -139,7 +139,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
   - Verificar se ao clicar no botão 'Continue' as mensagens de erro referente aos campos não preenchidos são exibidas.
   - Efetuar o logout e reset do ambiente.
 
-#### 🧪 test_checkout_step_2_next
+### 🧪 *test_checkout_step_2_next*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
@@ -154,7 +154,7 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
   - Verificar se houve o avanço para próxima página de checkout
   - Efetuar o logout e reset do ambiente.
 
-#### 🧪 test_checkout_step_3_finish
+### 🧪 *test_checkout_step_3_finish*
 
   - Carregar o setup da pagina de Login onde ocorrem as seguintes ações:
     - Preencher os campos de 'username' e 'password'.
