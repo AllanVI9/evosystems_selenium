@@ -165,5 +165,5 @@ Esta aplicação tem como objetivo efetuar os testes automatizados para o site h
 
   - Carregar o setup do Checkout.
 
-  - Verificar o sucesso da compra
+  - Verificar o sucesso da compra exibindo a mensagem de confirmação da mesma
   - Efetuar o logout e reset do ambiente.
