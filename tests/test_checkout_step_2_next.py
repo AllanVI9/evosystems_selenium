@@ -19,12 +19,12 @@ def test_checkout_step_2_next(driver, username, password):
     # Carrega o setup do Product
     product_page = ProductPage(driver)
 
-    # Carrega o setup do Checkout
-    checkout_page = CheckoutPage(driver)
-
     # Adiciona produtos ao carrinho
     added_product_names = product_page.add_products_to_cart(quantity=2)
     print(f"🛒 Produtos adicionados ao carrinho: {added_product_names}")
+
+    # Carrega o setup do Checkout
+    checkout_page = CheckoutPage(driver)
 
     # Verifica se ao clicar no botão 'Continue' todos os campos foram preenchidos
     fields_pack = [1,2,3,4]
